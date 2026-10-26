@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>貨架整理王｜慢慢整理，好好生活</title>
+  <link rel="icon" href="assets/shop.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" data-action="menu" aria-label="貨架整理王，開啟選單"><img src="assets/shop.svg" alt=""><span>小店日常<span class="brand-dot">・</span>貨架整理王</span></a>
+    <span class="header-note">留一點時間，給整齊的小日常。</span>
+    <span class="prototype">平台試玩版</span>
+    <nav class="language-switch" aria-label="Language"><button data-action="language" data-language="zh">繁體中文</button><button data-action="language" data-language="en">English</button></nav>
+  </header>
+  <main class="layout">
+    <aside class="journal">
+      <span class="eyebrow">一間小店，一點小成就</span>
+      <h1>慢慢整理，<br>好好生活<span>。</span></h1>
+      <p class="intro">讓每件商品找到同伴，<br>也讓心情，回到舒服的位置。</p>
+      <div class="journal-rule"></div>
+      <div class="chapter-label">今天的整理旅程 <span id="journey-count">0 / 20</span></div>
+      <nav id="journey" aria-label="關卡旅程"></nav>
+      <div class="quiet-note"><span aria-hidden="true">✧</span><p>沒有倒數，不用趕路。<br>需要的時候，提示一直都在。</p></div>
+      <p class="local-note">進度透過平台保存<br>不同網站的進度不會自動搬移</p>
+    </aside>
+    <section class="game-card" aria-label="貨架整理遊戲">
+      <div class="game-topline">
+        <button class="icon-button" data-action="menu" aria-label="暫停與設定"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+        <span class="chapter-pill" id="level-badge">第 1 關 / 共 20 關</span>
+        <button class="icon-button" id="sound-button" data-action="sound" aria-label="關閉音效"></button>
+      </div>
+      <div class="level-heading"><h2 id="level-title">最後一件，放好了</h2><p id="level-note">把最後一包餅乾，放回同伴旁邊。</p></div>
+      <div class="shelf-legend"><span>同類放一起，每架最多三件</span><span>從右端取放 <b aria-hidden="true">↙</b></span></div>
+      <div id="shelves" class="shelves" aria-label="商品貨架"></div>
+      <div class="feedback-space"><p id="feedback" role="status" aria-live="polite">點選商品所在貨架，再點要放的位置。</p></div>
+      <section id="hint-panel" class="hint-panel" aria-label="整理提示" hidden>
+        <div class="hint-copy"><span aria-hidden="true">✧</span><p id="hint-text"></p></div>
+        <div class="hint-actions"><button id="hint-next" class="small-button" data-action="reveal">看這一步</button><button class="text-button" data-action="dismiss-hint">自己試試</button></div>
+      </section>
+      <div class="game-actions">
+        <button id="undo-button" class="action-button" data-action="undo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 3 10l5 5M4 10h10a6 6 0 0 1 0 12" transform="translate(0 -2)"/></svg><span>復原一步</span></button>
+        <button id="hint-button" class="action-button hint-button" data-action="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19h6m-5 3h4M8 15c-5-5-2-12 4-12s9 7 4 12l-1 2H9z"/></svg><span>給我一點提示</span></button>
+        <button id="next-button" class="action-button primary" data-action="next" hidden>下一關 →</button>
+      </div>
+      <div class="game-footer"><span id="save-status">進度透過平台保存</span><span>按自己的步調就好 <span aria-hidden="true">❀</span></span></div>
+      <p id="save-warning" class="save-warning" role="alert" hidden></p>
+    </section>
+  </main>
+  <footer class="page-footer">貨架整理王 <span>／</span> 20 關小旅程 <span>／</span> 無計時・無評分</footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="boot-screen" class="platform-overlay" role="status"><p>正在載入小店…</p></div>
+  <div id="platform-guard" class="platform-overlay" role="status" hidden></div>
+  <script src="vendor/playgama-bridge.js"></script>
+  <script type="module" src="src/bootstrap.js"></script>
+</body>
+</html>
