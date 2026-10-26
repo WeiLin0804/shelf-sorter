@@ -1,0 +1,9 @@
+Playgama Bridge 2.3.1
+Copyright Playgama and upstream contributors.
+License: LGPL-3.0-or-later (see LICENSE).
+SDK runtime: unmodified @playgama/bridge 2.3.1 dist/playgama-bridge.js
+Package: https://registry.npmjs.org/@playgama/bridge/-/bridge-2.3.1.tgz
+Source: https://github.com/Playgama/bridge/tree/e33dc66f0fca39aa302bc065e5bd0ec464b879f5
+Corresponding source archive: bridge-source-2.3.1.zip (included alongside the runtime).
+The SDK remains a separate replaceable script at vendor/playgama-bridge.js.
+This notice grants no license to the game code or game artwork.
